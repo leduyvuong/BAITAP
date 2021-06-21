@@ -1,0 +1,117 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "LEDUYVUONG",
+      "img_url": "23.png",
+      "price": "300.03",
+      "status": "hot",
+      "sale": 0
+    },
+    {
+      "id": 3,
+      "name": "LEDUYVUONG 2",
+      "img_url": "23.png",
+      "price": "123.000",
+      "status": "none",
+      "sale": 0
+    },
+    {
+      "id": 4,
+      "name": "LEDUYVUONG 3",
+      "img_url": "23.png",
+      "price": "123.680",
+      "status": "none",
+      "sale": 7
+    },
+    {
+      "id": 6,
+      "name": "LEDUYVUONG 5",
+      "img_url": "13.jpg",
+      "price": "136.000",
+      "status": "none",
+      "sale": 0
+    },
+    {
+      "id": 8,
+      "name": "LEDUYVUONG 7",
+      "img_url": "13.jpg",
+      "price": "133.000",
+      "status": "none",
+      "sale": 0
+    },
+    {
+      "id": 9,
+      "name": "LEDUYVUONG 8",
+      "img_url": "23.png",
+      "price": "123.000",
+      "status": "hot",
+      "sale": 0
+    },
+    {
+      "id": 10,
+      "name": "LEDUYVUONG 9",
+      "img_url": "23.png",
+      "price": "123.000",
+      "status": "hot",
+      "sale": 0
+    },
+    {
+      "id": 12,
+      "name": "LEDUYVUONG 11",
+      "img_url": "13.jpg",
+      "price": "123.000",
+      "status": "none",
+      "sale": 7
+    },
+    {
+      "id": 13,
+      "name": "LEDUYVUONG 12",
+      "img_url": "23.png",
+      "price": "123.000",
+      "status": "none",
+      "sale": 0
+    },
+    {
+      "id": 14,
+      "name": "LEDUYVUONG 13",
+      "img_url": "14.jpg",
+      "price": "133.000",
+      "status": "hot",
+      "sale": 0
+    },
+    {
+      "id": 15,
+      "name": "LEDUYVUONG 14",
+      "img_url": "23.png",
+      "price": "123.000",
+      "status": "hot",
+      "sale": 0
+    },
+    {
+      "id": 16,
+      "name": "LEDUYVUONG 15",
+      "img_url": "23.png",
+      "price": "123.000",
+      "status": "hot",
+      "sale": 6
+    },
+    {
+      "id": 17,
+      "name": "LEDUYVUONG 16",
+      "img_url": "14.jpg",
+      "price": "123.000",
+      "status": "none",
+      "sale": 5
+    },
+    {
+      "id": 18,
+      "name": "LEDUYVUONG 17",
+      "img_url": "13.jpg",
+      "price": "123.000",
+      "status": "none",
+      "sale": 5
+    }
+  ],
+  "cart": []
+}
