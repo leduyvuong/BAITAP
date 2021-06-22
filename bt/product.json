@@ -122,6 +122,15 @@
       "length": "32",
       "ma_prd": 1,
       "id": 1
+    },
+    {
+      "name_prd": "LEDUYVUONG 2",
+      "price": "123.000",
+      "quantity": 2,
+      "size": "25",
+      "length": "32",
+      "ma_prd": 3,
+      "id": 2
     }
   ]
 }
