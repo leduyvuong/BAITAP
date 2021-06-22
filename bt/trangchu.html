@@ -830,7 +830,7 @@
         .then(function(response){
             return response.json();
         })
-        .then(function(posts){
+        .then(function(prds){
           // new product
           
           var items = document.getElementsByClassName("new"),
@@ -841,7 +841,7 @@
                              
                 var htmls ="" ;
                 
-                for (let h = dem1; h < posts.length; h++) {
+                for (let h = dem1; h < prds.length; h++) {
                     
                 if (h < dem1+6){
                   
@@ -850,13 +850,13 @@
                      
                          
                       htmls+=`<div class="col_prd" >
-                                                  <a href ="productpage.html?id=${posts[h].id}"><img class ="img_prd" src="image/${posts[h].img_url}" alt="" ></a>
+                                                  <a href ="productpage.html?id=${prds[h].id}"><img class ="img_prd" src="image/${prds[h].img_url}" alt="" ></a>
                                                   <div class="row name">
                                                     <div class="col-xl-8 " style="text-align: center;">
-                                                        <a href ="productpage.html?id=${posts[h].id}" style="font-size: 12px;font-weight:bold">${posts[h].name}</a>
+                                                        <a href ="productpage.html?id=${prds[h].id}" style="font-size: 12px;font-weight:bold">${prds[h].name}</a>
                                                     </div>
                                                       <div class="col-xl-4">
-                                                        <p style="font-weight:bold"> ${posts[h].price}</p>
+                                                        <p style="font-weight:bold"> ${prds[h].price}</p>
                                                       </div>
                                                 </div>
                                             </div>
@@ -868,13 +868,13 @@
                       
                                    
                       htmls=htmls+`<div class="row_prd" >
-                        <a href ="productpage.html?id=${posts[h].id}"><img class ="img_prd" src="image/${posts[h].img_url}" alt="" ></a>
+                        <a href ="productpage.html?id=${prds[h].id}"><img class ="img_prd" src="image/${prds[h].img_url}" alt="" ></a>
                                                   <div class="row name">
                                                     <div class="col-xl-8 " style="text-align: center;">
-                                                        <a href ="productpage.html?id=${posts[h].id}" style="font-size: 12px;font-weight:bold">${posts[h].name}</a>
+                                                        <a href ="productpage.html?id=${prds[h].id}" style="font-size: 12px;font-weight:bold">${prds[h].name}</a>
                                                     </div>
                                                       <div class="col-xl-4">
-                                                        <p style="font-weight:bold"> ${posts[h].price}</p>
+                                                        <p style="font-weight:bold"> ${prds[h].price}</p>
                                                       </div>
                                                 </div>
                                             </div>
@@ -901,21 +901,21 @@
                           
                 var htmls ="" ;
                 var tem = 1;
-                console.log(posts.length);
-                for (let h = dem2; h < posts.length; h++) {
+                console.log(prds.length);
+                for (let h = dem2; h < prds.length; h++) {
                   if (tem <=3){
                   
-                  if (tem == 1 && posts[h].status == 'hot'){    
+                  if (tem == 1 && prds[h].status == 'hot'){    
                     console.log(h)   ;            
                     tem++;
                     htmls+=`<div class="col_prd" >
-                      <a href ="productpage.html?id=${posts[h].id}"><img class ="img_prd" src="image/${posts[h].img_url}" alt="" ></a>
+                      <a href ="productpage.html?id=${prds[h].id}"><img class ="img_prd" src="image/${prds[h].img_url}" alt="" ></a>
                                                   <div class="row name">
                                                     <div class="col-xl-8 " style="text-align: center;">
-                                                        <a href ="productpage.html?id=${posts[h].id}" style="font-size: 12px;font-weight:bold">${posts[h].name}</a>
+                                                        <a href ="productpage.html?id=${prds[h].id}" style="font-size: 12px;font-weight:bold">${prds[h].name}</a>
                                                     </div>
                                                     <div class="col-xl-4">
-                                                      <p style="font-weight:bold"> ${posts[h].price}</p>
+                                                      <p style="font-weight:bold"> ${prds[h].price}</p>
                                                     </div>
                                               </div>
                                           </div>
@@ -923,16 +923,16 @@
                     ;
                                           
                   }
-                  else if( posts[h].status == 'hot'){   
+                  else if( prds[h].status == 'hot'){   
                     tem++;                  
                     htmls=htmls+`<div class="row_prd" >
-                      <a href ="productpage.html?id=${posts[h].id}"><img class ="img_prd" src="image/${posts[h].img_url}" alt="" ></a>
+                      <a href ="productpage.html?id=${prds[h].id}"><img class ="img_prd" src="image/${prds[h].img_url}" alt="" ></a>
                                                   <div class="row name">
                                                     <div class="col-xl-8 " style="text-align: center;">
-                                                        <a href ="productpage.html?id=${posts[h].id}" style="font-size: 12px;font-weight:bold">${posts[h].name}</a>
+                                                        <a href ="productpage.html?id=${prds[h].id}" style="font-size: 12px;font-weight:bold">${prds[h].name}</a>
                                                     </div>
                                                     <div class="col-xl-4">
-                                                      <p style="font-weight:bold"> ${posts[h].price}</p>
+                                                      <p style="font-weight:bold"> ${prds[h].price}</p>
                                                     </div>
                                               </div>
                                           </div>
@@ -959,22 +959,22 @@
                           
                 var htmls ="" ;
                 var tem = 1;
-                console.log(posts.length);
-                for (let h = dem2; h < posts.length; h++) {
+                console.log(prds.length);
+                for (let h = dem2; h < prds.length; h++) {
                   if (tem <=3){
-                  console.log(posts[h].sale)
-                  if (tem == 1 && posts[h].sale !== 0){    
+                  console.log(prds[h].sale)
+                  if (tem == 1 && prds[h].sale !== 0){    
                     console.log(h)   ;            
                     tem++;
                     htmls+=`<div class="col_prd" >
-                      <a href ="productpage.html?id=${posts[h].id}"><img class ="img_prd" src="image/${posts[h].img_url}" alt="" ></a>
+                      <a href ="productpage.html?id=${prds[h].id}"><img class ="img_prd" src="image/${prds[h].img_url}" alt="" ></a>
                                                   <div class="row name">
                                                     <div class="col-xl-8 " style="text-align: center;">
-                                                        <a href ="productpage.html?id=${posts[h].id}" style="font-size: 12px;font-weight:bold">${posts[h].name}</a>
+                                                        <a href ="productpage.html?id=${prds[h].id}" style="font-size: 12px;font-weight:bold">${prds[h].name}</a>
                                                     </div>
                                                     <div class="col-xl-4" style="line-height:0;margin-top: 10px;">
-                                                      <p style="font-weight:bold"> ${posts[h].price -(posts[h].price*posts[h].sale/100)}</p>
-                                                      <p style="font-weight:bold;color:red">${posts[h].price }</p>
+                                                      <p style="font-weight:bold"> ${prds[h].price -(prds[h].price*prds[h].sale/100)}</p>
+                                                      <p style="font-weight:bold;color:red">${prds[h].price }</p>
                                                     </div>
                                               </div>
                                           </div>
@@ -982,17 +982,17 @@
                     ;
                                           
                   }
-                  else if( posts[h].sale !== 0){   
+                  else if( prds[h].sale !== 0){   
                     tem++;                  
                     htmls=htmls+`<div class="row_prd" >
-                      <a href ="productpage.html?id=${posts[h].id}"><img class ="img_prd" src="image/${posts[h].img_url}" alt="" ></a>
+                      <a href ="productpage.html?id=${prds[h].id}"><img class ="img_prd" src="image/${prds[h].img_url}" alt="" ></a>
                                                   <div class="row name">
                                                     <div class="col-xl-8 " style="text-align: center;">
-                                                        <a href ="productpage.html?id=${posts[h].id}" style="font-size: 12px;font-weight:bold">${posts[h].name}</a>
+                                                        <a href ="productpage.html?id=${prds[h].id}" style="font-size: 12px;font-weight:bold">${prds[h].name}</a>
                                                     </div>
                                                     <div class="col-xl-4" style="line-height:0;margin-top: 10px;">
-                                                      <p style="font-weight:bold"> ${posts[h].price -(posts[h].price*posts[h].sale/100)}</p>
-                                                      <p style="font-weight:bold;color:red">${posts[h].price }</p>
+                                                      <p style="font-weight:bold"> ${prds[h].price -(prds[h].price*prds[h].sale/100)}</p>
+                                                      <p style="font-weight:bold;color:red">${prds[h].price }</p>
                                                     </div>
                                               </div>
                                           </div>

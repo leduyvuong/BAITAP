@@ -1187,7 +1187,7 @@
         </div>
       </section>
       <script>
-
+        var a;
         function plus(){
           console.log(document.getElementById('quantity').value)
           document.getElementById('quantity').value= parseInt(document.getElementById('quantity').value)+1;
@@ -1201,10 +1201,11 @@
         .then(function(response){
             return response.json();
         })
-        .then(function(posts){
-            a =  posts[0];
-            console.log(a)
-            document.getElementById("price").innerHTML= "<b>€. "+ posts[0].price+"</b> " ;
+        .then(function(prds){
+            a =  prds[0];
+            
+            console.log(a);
+            document.getElementById("price").innerHTML= "<b>€. "+ prds[0].price+"</b> " ;
             var list = document.getElementsByClassName("namePrd");
             console.log(list.length);
             for (let i = 0;i < list.length; i++){
@@ -1252,7 +1253,7 @@
               'Content-Type': 'application/json'
             }
             })
-            location.reload();
+            // location.reload();
         }
         
         function len_select(a){
