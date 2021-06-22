@@ -1129,11 +1129,14 @@
         </div>
       </section>
       <script>
+        
         var listPrd;
+        reload();
         function delClick(btn){
+          reload();
           var id = btn.id.substring(btn.id.indexOf('l')+1,btn.id.length);
           del(id);
-          // window.location.reload(false); 
+          reload();
         }
         function del(id){
           console.log('http://localhost:3000/cart/' + id)
@@ -1146,21 +1149,8 @@
        
         
         
-          var urlprd = 'http://localhost:3000/products';
-          console.log(urlprd);
+          
         
-         fetch(urlprd, {method: 'GET'})
-        .then(function(response){   
-                   
-            return response.json();
-        })
-        .then(function(prds){
-          
-          listPrd = prds; 
-          
-          return listPrd;    
-
-        })
         function getTotalCart(){
           var total= 0;
           $('.total').each(function() {
@@ -1179,24 +1169,40 @@
             var total = 0;
             total =  parseFloat($('#prc'+id).text())*parseFloat(document.getElementById(id).value);
             console.log($('#prc'+id).text());
-            document.getElementById("total"+id).innerHTML = total;
+            document.getElementById("total"+id).innerHTML = total.toFixed(2);
             getTotalCart();
        }
         function sub(btn){
           var id = btn.id.substring(btn.id.indexOf('b')+1,btn.id.length);
           if(document.getElementById(id).value <= 1){
             del(id);
-            // window.location.reload(false); 
+            
           }else{
             document.getElementById(id).value = parseInt( document.getElementById(id).value) -1;
             var total = 0;
             total =  parseFloat($('#prc'+id).text())*parseFloat(document.getElementById(id).value);
             console.log($('#prc'+id).text());
-            document.getElementById("total"+id).innerHTML = total;
+            document.getElementById("total"+id).innerHTML = total.toFixed(2);
             getTotalCart()
           }
         }
         //SHow
+        function reload(listPrd){
+          var urlprd = 'http://localhost:3000/products';
+          console.log(urlprd);
+        
+         fetch(urlprd, {method: 'GET'})
+        .then(function(response){   
+                   
+            return response.json();
+        })
+        .then(function(prds){
+          
+          listPrd = prds; 
+          
+          return listPrd;    
+
+        });
         fetch("http://localhost:3000/cart")
         .then(function(response){
             return response.json();
@@ -1242,7 +1248,7 @@
                               
                             </div>
                             <div class="index_prd" style="display:flex">
-                              €<p id ="total${prd.id}" class="total"> ${sub} <p>
+                              €<p id ="total${prd.id}" class="total"> ${sub.toFixed(2)} <p>
                             </div>
                             <button onClick="delClick(this)" id="del${prd.id}" style="width: 15px;height: 15px;margin-left: 15px;
                             background:none;border:none;
@@ -1264,7 +1270,7 @@
           document.getElementById('total_cart').innerText = total_cart;
           document.getElementById('prd').innerHTML = html;
         })
-        
+      }
       </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

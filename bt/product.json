@@ -115,22 +115,13 @@
   ],
   "cart": [
     {
-      "name_prd": "LEDUYVUONG 7",
-      "price": "133.000",
-      "quantity": "12",
+      "name_prd": "LEDUYVUONG",
+      "price": "300.03",
+      "quantity": 12,
       "size": "25",
-      "length": "27",
-      "ma_prd": 8,
-      "id": 3
-    },
-    {
-      "name_prd": "LEDUYVUONG 7",
-      "price": "133.000",
-      "quantity": "12",
-      "size": "27",
-      "length": "34",
-      "ma_prd": 8,
-      "id": 4
+      "length": "32",
+      "ma_prd": 1,
+      "id": 1
     }
   ]
 }
