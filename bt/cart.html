@@ -1133,7 +1133,7 @@
         function delClick(btn){
           var id = btn.id.substring(btn.id.indexOf('l')+1,btn.id.length);
           del(id);
-          location.reload();
+          // window.location.reload(false); 
         }
         function del(id){
           console.log('http://localhost:3000/cart/' + id)
@@ -1186,7 +1186,7 @@
           var id = btn.id.substring(btn.id.indexOf('b')+1,btn.id.length);
           if(document.getElementById(id).value <= 1){
             del(id);
-            location.reload();
+            // window.location.reload(false); 
           }else{
             document.getElementById(id).value = parseInt( document.getElementById(id).value) -1;
             var total = 0;

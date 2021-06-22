@@ -1240,14 +1240,14 @@
                
         //ADD TO CART
         function addtocart(){
-        
+          
             fetch('http://localhost:3000/cart', {
             method: 'POST', 
             body: JSON.stringify({name_prd :a.name,
                       price :a.price,
                       quantity: document.getElementById("quantity").value,
                       size: document.getElementsByClassName('size_select')[0].value,
-                      length: document.getElementById('size27').value,
+                      length: document.getElementsByClassName('len_select')[0].value,
                       ma_prd: a.id}), 
             headers:{
               'Content-Type': 'application/json'
