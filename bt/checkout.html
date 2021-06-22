@@ -395,7 +395,7 @@
                                 <p>Please log in below:</p>
                                 <form action="">
                                     <label for=""> <b>Email Address</b><span style="color: red;">*</span></label><br>
-                                    <input type="text" style="width: 230px;" name="" id="">
+                                    <input onchange="valiemail(this)" type="text" style="width: 230px;" name="" id="">
                                     <label for=""><b>Password</b><span style="color: red;">*</span></label><br>
                                     <input type="password"  style="width: 230px;" name="" id="">
                                     <div style="display: flex;">
@@ -486,8 +486,8 @@
                                 </div>
                                 <div class="inf_sub">
                                     <label for="">FULL NAME*</label>
-                                    <input onchange="vali(this.id)" id ="firstname" type="text" placeholder="first name">
-                                    <input onchange="vali(this.id)" id ="surname" type="text" placeholder="surname">
+                                    <input onchange="valiName()" class="name" type="text" placeholder="first name">
+                                    <input onchange="valiName()" class ="name" type="text" placeholder="surname">
                                 </div>
                                 <div class="inf_sub">
                                     <label for="">COMPANY</label>
@@ -495,8 +495,8 @@
                                 </div>
                                 <div class="inf_sub">
                                     <label for="">ADDRESS*</label>
-                                    <input onchange="vali(this.id)" id ="address1" type="text" placeholder="address line 1">
-                                    <input onchange="vali(this.id)" id ="address2"  type="text" placeholder="address line 2">
+                                    <input onchange="valiadd()" class="add" type="text" placeholder="address line 1">
+                                    <input onchange="valiadd()" class="add"  type="text" placeholder="address line 2">
                                 </div>
                                 <div class="" style="display: flex;">
                                     <button style="width: 30px; height: 30px;background: #26d2fc; color: white;border: none;">✓</button>
@@ -798,9 +798,29 @@
             const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
         }
+        function valiSdt(){
+          if($('#sdt').text().length< 10){
+            alert("So Dien Thoai co 10 chu so");
+          }
+        }
+        function valiName(){
+          if($('$name').text().length < 6 && /^[A-Za-z ]+$/.test($('$name'))){
+            alert("Nhap dung ten cua ban")
+          }
+        }
+        function valiAdd(){
+          if($('$add').text().length < 6 && /^[A-Za-z0-9]+$/.test($('$add'))){
+            alert("Nhap dung ten cua ban")
+          }
+        }
         function vali(id){
           if ($('#'+id).text() == "")
             alert("Khong duoc de trong " + id);
+        }
+        function valiCre(){
+          if ($("#cre").text.length < 6){
+            alert('Credit card > 6 chu so');
+          }
         }
         function valiemail(a) {                        
             if (validateEmail(a.value)) {
